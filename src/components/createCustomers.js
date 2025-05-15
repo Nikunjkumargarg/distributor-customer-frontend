@@ -15,7 +15,7 @@ export default function CreateCustomer() {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
-      body: JSON.stringify({ mobile_number: mobile }),
+      body: JSON.stringify({ mobile_number: `+91${mobile}` }),
     });
 
     const data = await res.json();
@@ -34,7 +34,7 @@ export default function CreateCustomer() {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
-      body: JSON.stringify({ mobile_number: mobile, otp }),
+      body: JSON.stringify({ mobile_number: `+91${mobile}`, otp }),
     });
 
     const data = await res.json();
@@ -59,7 +59,7 @@ export default function CreateCustomer() {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
-      body: JSON.stringify({ name, mobile_number: mobile }),
+      body: JSON.stringify({ name, mobile_number: `+91${mobile}` }),
     });
 
     const data = await res.json();
