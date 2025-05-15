@@ -77,10 +77,10 @@ export default function CreateCustomer() {
 
   return (
     <div className="container">
-      <h2>Create Customer</h2>
+      <h2>Create Recipients</h2>
       <form onSubmit={createCustomer}>
         <input
-          placeholder="Customer Name"
+          placeholder="Recipient Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required

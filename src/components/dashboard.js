@@ -55,7 +55,9 @@ export default function Dashboard() {
 
   return (
     <div className="container">
-      <h2>Distributor Dashboard</h2>
+      <h2 className="text-xl font-bold mb-4">
+        {role === "admin" ? "Admin Dashboard" : "Distributor Dashboard"}
+      </h2>
       <ul>
         {role === "admin" && (
           <li>
