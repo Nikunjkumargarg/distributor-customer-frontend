@@ -72,12 +72,12 @@ export default function Dashboard() {
       </ul>
       {role === "admin" && (
         <>
-          <h3>Customer List</h3>
+          <h3>Recipient List</h3>
           <table className="min-w-full table-auto">
             <thead>
               <tr>
-                <th className="px-4 py-2 border">Customer Name</th>
-                <th className="px-4 py-2 border">Distributor</th>
+                <th className="px-4 py-2 border">Recipient Mobile Number</th>
+                <th className="px-4 py-2 border">Distributor Mobile Number</th>
               </tr>
             </thead>
             <tbody>
@@ -85,10 +85,10 @@ export default function Dashboard() {
                 customers.map((customer) => (
                   <tr key={customer.id}>
                     <td className="px-4 py-2 border">
-                      {customer.customer_name}
+                      {customer.customer_mobile}
                     </td>
                     <td className="px-4 py-2 border">
-                      {customer.distributor_name}
+                      {customer.distributor_mobile}
                     </td>
                   </tr>
                 ))
